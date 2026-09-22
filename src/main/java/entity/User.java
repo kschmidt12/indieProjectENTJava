@@ -3,7 +3,7 @@ package entity;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 /**
  * A class to represent a entity.user.
@@ -11,9 +11,9 @@ import javax.persistence.*;
  * @author Katie Schmidt
  */
 @Entity
-@Table(name = "entity.user")
+@Table(name = "user")
 
-public class user {
+public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native",strategy = "native")
@@ -35,7 +35,7 @@ public class user {
     /**
      * Instantiates a new User.
      */
-    public user() {
+    public User() {
     }
 
     /**
@@ -47,7 +47,7 @@ public class user {
      * @param id       the id
      * @param password the password
      */
-    public user(int id, String name, String email, String userName, String password) {
+    public User(int id, String name, String email, String userName, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
