@@ -6,25 +6,25 @@ It's estimated that over 50 million people worldwide crochet or knit, with knitt
 
 ## Project Technologies/Techniques 
 - Security and Authentication
-  1. AWS Cognito
+  * AWS Cognito
 - Database 
-   1. MySQL 8.x
+  * MySQL 8.x
 - ORM Framework
-   1.  TBD
+  * TBD
 - Dependency Management
-   1. Maven
+  * Maven
 - Web services consumed using Java
-    TBD
+   *  TBD
 - CSS
-    TBD
+   *  TBD
 - Data Validation
-    TBD
+   *  TBD
 - Logging
-    Log4J
+   *  Log4J
 - Hosting
-    AWS
+   * AWS
 - Tech I'd like to explore
-    AI implementation in API?
+   * AI implementation in API?
 - Unit Testing 
-    JUnit testing
+   * JUnit testing
 - IDE: IntelliJ IDEA
