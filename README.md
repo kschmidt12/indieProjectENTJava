@@ -7,10 +7,10 @@ It's estimated that over 50 million people worldwide crochet or knit, with knitt
 ## Project Technologies/Techniques 
 - Security and Authentication
   1. AWS Cognito
-  - Database 
-  1. MySQL 8.x
+- Database 
+  2. MySQL 8.x
 - ORM Framework
-    TBD
+   1. TBD
 - Dependency Management
     Maven
 - Web services consumed using Java
