@@ -1,6 +1,6 @@
-## Weekly Reflection
+# Weekly Reflection
 
-# Week 4
+##  Week 4
 - 9/22/26 3 hours spent
 
 - Created README, project plan, weekly reflection and wireframes
