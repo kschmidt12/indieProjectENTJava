@@ -8,11 +8,11 @@ It's estimated that over 50 million people worldwide crochet or knit, with knitt
 - Security and Authentication
   1. AWS Cognito
 - Database 
-    MySQL 8.x
+   1. MySQL 8.x
 - ORM Framework
-    TBD
+   1.  TBD
 - Dependency Management
-    Maven
+   1. Maven
 - Web services consumed using Java
     TBD
 - CSS
