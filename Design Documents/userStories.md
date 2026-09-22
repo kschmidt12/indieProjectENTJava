@@ -4,7 +4,7 @@
 - I want to be able to sign up to an application to store my yarn data. 
 
 ## Sign in 
-- As a user I want to be able to sign in and access my secured yarn data.
+- As a entity.user I want to be able to sign in and access my secured yarn data.
 
 ## Find yarn description
 - I want to be able to find the description of my yarn, weight and hook size.
