@@ -6,7 +6,7 @@ It's estimated that over 50 million people worldwide crochet or knit, with knitt
 
 ## Project Technologies/Techniques 
 - Security and Authentication
-   AWS Cognito
+  &nbsp;&nbsp;&nbsp;&nbsp;AWS Cognito
 - Database 
     MySQL 8.x
 - ORM Framework
