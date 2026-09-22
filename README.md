@@ -11,7 +11,7 @@ It's estimated that over 50 million people worldwide crochet or knit, with knitt
     MySQL 8.x
 - ORM Framework
     TBD
-- Dependency Maagement
+- Dependency Management
     Maven
 - Web services consumed using Java
     TBD
