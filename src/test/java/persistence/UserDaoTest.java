@@ -1,7 +1,11 @@
 package persistence;
 
 import entity.User;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -61,13 +65,27 @@ class UserDaoTest {
 
     @Test
     void getAll() {
+        userDao = new UserDao();
+        List<User> users = userDao.getAll();
+        assertEquals(2, users.size());
+
     }
 
     @Test
     void getByPropertyEqual() {
+        userDao = new UserDao();
+        List<User> user = userDao.getByPropertyEqual("name", "Katie Schmidt");
+        assertEquals(1, user.size());
+        assertEquals(1, user.get(0).getId());
     }
 
     @Test
     void getByPropertyLike() {
+        userDao = new UserDao();
+        List<User> user = userDao.getByPropertyLike("name", "K");
+        assertEquals(1, user.size());
+        assertEquals(1, user.get(0).getId());
     }
+
+
 }
