@@ -5,13 +5,18 @@ import org.hibernate.annotations.GenericGenerator;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * A class to represent a entity.user.
+ * A class to represent an entity.user.
  *
  * @author Katie Schmidt
  */
 @Entity
 @Table(name = "user")
+
+
 
 public class User {
     @Id
@@ -31,6 +36,8 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Yarn> yarnList = new ArrayList<>();
 
     /**
      * Instantiates a new User.
@@ -55,6 +62,23 @@ public class User {
         this.password = password;
     }
 
+    public void addYarn(Yarn yarn) {
+        yarnList.add(yarn);
+        yarn.setUser(this);
+    }
+
+    public void removeYarn(Yarn yarn) {
+        yarnList.remove(yarn);
+        yarn.setUser(null);
+    }
+
+    public List<Yarn> getYarn() {
+        return yarnList;
+    }
+
+    public void setYarn(List<Yarn> yarn) {
+        this.yarnList = yarn;
+    }
 
     /**
      * Gets name.
@@ -79,7 +103,7 @@ public class User {
      *
      * @return the email
      */
-    public String email() {
+    public String getEmail() {
         return email;
     }
 

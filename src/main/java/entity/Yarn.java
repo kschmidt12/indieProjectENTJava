@@ -14,14 +14,27 @@ public class Yarn {
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native",strategy = "native")
     private int id;
+
+    @Column(name = "brand_name")
     private String brandName;
+
+    @Column(name = "color")
     private String color;
+
+    @Column(name = "yarn_amount")
     private String yarnAmount;
+
+    @Column(name = "yarn_size")
     private String yarnSize;
+
+    @Column(name = "hook_size")
     private String hookSize;
+
+    @Column(name = "bought_from")
     private String boughtFrom;
 
     @ManyToOne
+    @JoinColumn(name ="user_id")
     private User user;
 
     /**

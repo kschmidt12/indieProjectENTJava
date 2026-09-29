@@ -3,6 +3,10 @@ package persistence;
 import entity.User;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.dialect.Database;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -10,6 +14,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserDaoTest {
+
 
     UserDao userDao;
 
@@ -67,7 +72,7 @@ class UserDaoTest {
     void getAll() {
         userDao = new UserDao();
         List<User> users = userDao.getAll();
-        assertEquals(2, users.size());
+        assertEquals(3, users.size());
 
     }
 
