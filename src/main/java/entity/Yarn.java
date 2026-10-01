@@ -38,6 +38,12 @@ public class Yarn {
     private User user;
 
     /**
+     * Instantiates yarn
+     */
+    public Yarn() {
+
+    }
+    /**
      * constructor for brand name and yarn
      * @param brandName the band name
      * @param user the user
