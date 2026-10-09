@@ -6,3 +6,12 @@
 - Created README, project plan, weekly reflection and wireframes
 - I'm feeling like I will need to improve all of them, I think once I dig deeper into the project I'll need to change a bit
 - I'm wondering if I've missed any pages for wireframes, I've been very basic with them at this point.
+
+## Week 6
+-10/9/26 time spent ~ 6 hours?
+
+-Realized I forgot to add week 5!
+-Added basic display similar to the user display exercise to view data from user
+-Deployed on AWS, struggled with this but it was probably 2 hours spend only to find I didn't have my database as public
+-Need to go back and fix Week 5 still 
+-Need to work on commit comments 

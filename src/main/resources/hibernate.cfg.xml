@@ -1,6 +1,6 @@
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://awseb-e-kgavymg5yk-stack-awsebrdsdatabase-cxvcrslshr2d.cd0ek2sg6xu3.us-east-2.rds.amazonaws.com:3306/Yarn</property>
+        <property name="connection.url">jdbc:mysql://awseb-e-kgavymg5yk-stack-awsebrdsdatabase-cxvcrslshr2d.cd0ek2sg6xu3.us-east-2.rds.amazonaws.com:3306/yarn</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="connection.username">root</property>
         <property name="connection.password">Looping2*</property>
