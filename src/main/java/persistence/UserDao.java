@@ -79,7 +79,7 @@ public class UserDao {
         HibernateCriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<User> query = builder.createQuery(User.class);
         Root<User> root = query.from(User.class);
-        List<User> Users = session.createSelectionQuery( query ).getResultList();
+        List<User> Users = session.createSelectionQuery(query).getResultList();
 
         logger.debug("The list of users " + Users);
         session.close();
@@ -89,7 +89,6 @@ public class UserDao {
 
     /**
      * Get user by property (exact match)
-     * sample usage: getByPropertyEqual("lastname", "Curry")
      */
     public List<User> getByPropertyEqual(String propertyName, String value) {
         Session session = sessionFactory.openSession();
@@ -108,7 +107,6 @@ public class UserDao {
 
     /**
      * Get user by property (like)
-     * sample usage: getByPropertyLike("lastname", "C")
      */
     public List<User> getByPropertyLike(String propertyName, String value) {
         Session session = sessionFactory.openSession();
