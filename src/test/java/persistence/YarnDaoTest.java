@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class YarnDaoTest {
 
     YarnDao yarnDao;
+    UserDao userDao;
 
     @BeforeEach
     void setUp() {
@@ -19,6 +20,7 @@ class YarnDaoTest {
         Database database = Database.getInstance();
         database.runSQL("clean.sql");
         yarnDao = new YarnDao();
+        userDao = new UserDao();
     }
 
     @Test
@@ -38,6 +40,8 @@ class YarnDaoTest {
 
     @Test
     void insert() {
+
+        User user = userDao.getById(1);
         Yarn yarn = new Yarn();
         yarn.setBrandName("I Love This Yarn");
         yarn.setColor("pink");
@@ -45,25 +49,26 @@ class YarnDaoTest {
         yarn.setYarnSize("3");
         yarn.setHookSize("5 to 6");
         yarn.setBoughtFrom("Hobby Lobby");
+        yarn.setUser(user);
         yarnDao.insert(yarn);
 
         Yarn newYarn = yarnDao.getById(yarn.getId());
 
         assertEquals("I Love This Yarn", newYarn.getBrandName());
+
+        assertEquals(user.getId(), newYarn.getUser().getId());
     }
 
     @Test
     void delete() {
         Yarn yarn = new Yarn();
-        yarn.setBrandName("Unknown");
-        yarn.setColor("Rainbow");
-        yarn.setYarnAmount("7");
-        yarnDao.insert(yarn);
+        Yarn retrievedYarn = yarnDao.getById(1);
 
-        Yarn retrievedYarn = yarnDao.getById(yarn.getId());
         yarnDao.delete(retrievedYarn);
         Yarn deletedYarn = yarnDao.getById(yarn.getId());
         assertNull(deletedYarn);
+
+        assertNotNull(userDao.getById(1));
     }
 
     @Test
